@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/reset.scss';
+
+/* Importing Bootstrap SCSS file. */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.modal-content{
+    width: 800px;
+    background-color: #44475a;
+    color: white;
+}
+
+li{
+    color: #f8f8f2;
+    margin: 5%;
+    list-style-type: disc;
+}
+
