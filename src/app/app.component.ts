@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'black-jack';
+  started: boolean = false
+
+
+  start(started: boolean) {
+    this.started = started
+  }
 }

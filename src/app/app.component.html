@@ -1,4 +1,4 @@
 <body class="main">
-    <app-side-menu class="side-menu"></app-side-menu>
-    <app-table class="table"></app-table>
+    <app-side-menu class="side-menu" (started)="start($event)"></app-side-menu>
+    <app-table class="table" [started]="started"></app-table>
 </body>

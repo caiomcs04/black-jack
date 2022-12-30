@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,13 +7,24 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent {
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
+
+  @Output() started = new EventEmitter<boolean>();
 
   open() {
     const modalRef = this.modalService.open(NgbdModalContent);
     modalRef.componentInstance.name = 'World';
   }
+
+  start() {
+    this.started.emit(true)
+  }
 }
+
+
+
+
+
 
 @Component({
   selector: 'ngbd-modal-content',
@@ -74,5 +85,5 @@ export class SideMenuComponent {
 export class NgbdModalContent {
   @Input() name: any;
 
-  constructor(public activeModal: NgbActiveModal) {}
+  constructor(public activeModal: NgbActiveModal) { }
 }

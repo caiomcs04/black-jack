@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent {
+export class TableComponent implements OnInit {
+  @Input()
+  set started(started: boolean) {
+    this.start = started
+  }
+
+  start!: boolean
+
+  ngOnInit() {
+  }
 
 }

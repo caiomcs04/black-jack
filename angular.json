@@ -28,7 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-               "src/assets/cards-svg"
+              "src/assets/cards-svg"
             ],
             "styles": [
               "src/styles.scss"

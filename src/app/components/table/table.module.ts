@@ -1,7 +1,8 @@
-import { CardsModule } from './../cards/cards.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table.component';
+import { DealerModule } from '../dealer/dealer.module';
+import { PlayerModule } from '../player/player.module';
 
 
 
@@ -11,7 +12,7 @@ import { TableComponent } from './table.component';
   ],
   exports:[TableComponent],
   imports: [
-    CommonModule,CardsModule
+    CommonModule,DealerModule,PlayerModule
   ]
 })
 export class TableModule { }
